@@ -3,9 +3,11 @@ Description=Shipping Service
 
 [Service]
 User=roboshop
+// highlight-start
 Environment=CART_ENDPOINT=cart.robisam.site:8080
 Environment=DB_HOST=mysql.robisam.site
-ExecStart=/usr/bin/java -jar /app/shipping.jar
+// highlight-end
+ExecStart=/bin/java -jar /app/shipping.jar
 SyslogIdentifier=shipping
 
 [Install]
